@@ -1,0 +1,10 @@
+<div class="container form mt-3 p-3 w-50">
+  <h1>Add a movie to your <%= @list.name %> list</h1>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie %>
+      <%= f.input :comment, placeholder: "Add your comment here..." %>
+      <%= f.submit class: "btn btn-primary" %>
+    <% end %>
+
+    <%= link_to "Back to #{@list.name} list", list_path(@list) %>
+</div>

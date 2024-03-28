@@ -1,0 +1,12 @@
+.cover {
+  background-image: linear-gradient(
+      rgba(206, 174, 249, 0.3),
+      rgba(166, 207, 213, 0.3)
+    ),
+    url(asset_path("cover.jpg"));
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  opacity: 0.9;
+}

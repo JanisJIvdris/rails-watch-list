@@ -1,0 +1,18 @@
+<div class="cover mt-3 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1 class="display-4">My Fun Movie World</h1>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="card bg-dark text-white p-3">
+    <h2 class="mb-4">My Lists</h2>
+    <ul class="list-group list-group-flush">
+      <% @lists.each do |list| %>
+        <li class="list-group-item bg-warning"><%= link_to list.name, list_path(list), class: "text-white" %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <%= link_to "Add a New List", new_list_path, class: "btn btn-primary mt-3", style: "background-color: #917AAF; border-color: #917AAF;" %>
+</div>
